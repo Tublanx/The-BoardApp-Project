@@ -1,5 +1,6 @@
 package com.lgh.springbootwebservice.web.domain.posts;
 
+import com.lgh.springbootwebservice.web.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor // 기본 생성자 추가 (매개변수 x)
 @Entity
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
