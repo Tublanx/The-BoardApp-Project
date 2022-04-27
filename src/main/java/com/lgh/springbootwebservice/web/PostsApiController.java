@@ -1,6 +1,6 @@
 package com.lgh.springbootwebservice.web;
 
-import com.lgh.springbootwebservice.service.posts.PostsService;
+import com.lgh.springbootwebservice.service.PostsService;
 import com.lgh.springbootwebservice.web.dto.PostsResponseDto;
 import com.lgh.springbootwebservice.web.dto.PostsSaveRequestDto;
 import com.lgh.springbootwebservice.web.dto.PostsUpdateRequestDto;
