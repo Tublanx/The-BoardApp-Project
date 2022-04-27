@@ -1,4 +1,4 @@
-package com.lgh.springbootwebservice.service.posts;
+package com.lgh.springbootwebservice.service;
 
 import com.lgh.springbootwebservice.web.domain.posts.Posts;
 import com.lgh.springbootwebservice.web.domain.posts.PostsRepository;
