@@ -1,12 +1,12 @@
 package com.lgh.springbootwebservice.web.domain.posts;
 
-import org.aspectj.lang.annotation.Before;
-import org.assertj.core.api.Assertions;
+import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @SpringBootTest
@@ -33,8 +33,25 @@ class PostsRepositoryTest {
 
         // then
         Posts posts = postsList.get(0);
-        Assertions.assertThat(posts.getTitle()).isEqualTo(title);
-        Assertions.assertThat(posts.getContent()).isEqualTo(content);
+        assertThat(posts.getTitle()).isEqualTo(title);
+        assertThat(posts.getContent()).isEqualTo(content);
+    }
+
+    @Test
+    public void addBaseTimeEntity() {
+        // given
+        LocalDateTime now = LocalDateTime.of(2022, 4, 27, 10, 55, 0);
+        postsRepository.save(Posts.builder().title("title").content("content").author("author").build());
+
+        // when
+        List<Posts> postsList = postsRepository.findAll();
+
+        // then
+        Posts posts = postsList.get(0);
+
+        System.out.println(">>>>>>>> createdDate=" + posts.getCreatedDate() + ", modifiedDate="+posts.getModifiedDate());
+        assertThat(posts.getCreatedDate()).isAfter(now);
+        assertThat(posts.getModifiedDate()).isAfter(now);
     }
 
 }
