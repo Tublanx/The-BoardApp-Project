@@ -1,5 +1,4 @@
 HELP.md
-application-oauth.properties
 .gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
@@ -19,6 +18,7 @@ bin/
 !**/src/test/**/bin/
 
 ### IntelliJ IDEA ###
+application-oauth.properties
 .idea
 *.iws
 *.iml
