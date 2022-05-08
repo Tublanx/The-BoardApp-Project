@@ -21,6 +21,7 @@ dependencies {
 	compileOnly 'org.springframework.boot:spring-boot-starter-mustache'
 	compileOnly 'org.springframework.boot:spring-boot-starter-oauth2-client'
 	compileOnly 'org.springframework.session:spring-session-jdbc'
+	testCompileOnly 'org.springframework.security:spring-security-test'
 	annotationProcessor 'org.projectlombok:lombok:1.18.10'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
