@@ -20,6 +20,7 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok:1.18.24'
 	compileOnly 'org.springframework.boot:spring-boot-starter-mustache'
 	compileOnly 'org.springframework.boot:spring-boot-starter-oauth2-client'
+	compileOnly 'org.springframework.session:spring-session-jdbc'
 	annotationProcessor 'org.projectlombok:lombok:1.18.10'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
